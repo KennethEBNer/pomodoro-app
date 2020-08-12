@@ -18,18 +18,18 @@ function SessionLength(props) {
 
   return (
     <section>
-      <h4 class="timer-labels" id="session-label">Arbeid Lengde</h4>
+      <h4 className="timer-labels" id="session-label">Arbeid Lengde</h4>
       <section className="interval-container">
         <button
           id="session-increment"
           onClick={increaseCounter}
-          disabled={props.isPlay === true ? "disabled" : ""}><i class="fas fa-arrow-up"></i>
+          disabled={props.isPlay === true ? "disabled" : ""}><i className="fas fa-arrow-up"></i>
         </button>
         <p id="session-length" className="interval-length">{props.sessionLength}</p>
         <button
           id="session-decrement"
           onClick={decreaseCounter}
-          disabled={props.isPlay === true ? "disabled" : ""}><i class="fas fa-arrow-down"></i>
+          disabled={props.isPlay === true ? "disabled" : ""}><i className="fas fa-arrow-down"></i>
         </button>
       </section>
     </section>
