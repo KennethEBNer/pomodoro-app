@@ -96,29 +96,29 @@ class App extends React.Component {
     return (
       <main>
         <h2>Pomodoro Klokke</h2>
-        <p className="text">Pomodoro-teknikken ble utviklet i 1992 av Francesco Cirillo som ville gjøre tiden brukt på studier 
-          mer effektiv. Den tradisjonelle pomodoro-teknikken innebærer et intenst fokus
-          på en oppgave i perioder på 25 minutter med 5 minutters pauser. Denne appen
-          gir deg frihet til å velge egne tidsperioder ut fra hva som passer deg best.</p>
-        <section className="both-intervals-container">
+        <p className="text">Den tradisjonelle pomodoro-teknikken innebærer fokuserte arbeidsperioder på 25 minutter med 5 minutters pauser i mellom.
+         Denne appen gir deg frihet til å velge egne tidsperioder ut fra hva som passer deg best.</p>
+        <div className="main-container">
           <SessionLength
             isPlay={this.state.isPlay}
             sessionLength={this.state.sessionLength}
             increaseSession={this.onIncreaseSessionLength}
             decreaseSession={this.onDecreaseSessionLength} />
-          <BreakInterval
-            isPlay={this.state.isPlay}
-            breakInterval={this.state.breakLength}
-            increaseBreak={this.onIncreaseBreakLength}
-            decreaseBreak={this.onDecreaseBreakLength} />
-        </section>
-        <Timer
-          timerMinute={this.state.timerMinute}
-          breakLength={this.state.breakLength}
-          updateTimerMinute={this.onUpdateTimerMinute}
-          toggleInterval={this.onToggleInterval}
-          resetTimer={this.onResetTimer}
-          playStopTimer={this.onPlayStopTimer} />
+          <Timer
+            timerMinute={this.state.timerMinute}
+            breakLength={this.state.breakLength}
+            updateTimerMinute={this.onUpdateTimerMinute}
+            toggleInterval={this.onToggleInterval}
+            resetTimer={this.onResetTimer}
+            playStopTimer={this.onPlayStopTimer} />
+          <section>
+            <BreakInterval
+              isPlay={this.state.isPlay}
+              breakInterval={this.state.breakLength}
+              increaseBreak={this.onIncreaseBreakLength}
+              decreaseBreak={this.onDecreaseBreakLength} />
+          </section>
+        </div>
       </main>
     );
   }
